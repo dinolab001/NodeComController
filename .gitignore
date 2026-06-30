@@ -1,0 +1,43 @@
+# --- Python Runtime ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual Environments ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- Environment Variables & Secrets ---
+.env
+.env.*
+!.env.example
+*.env
+
+# --- FastAPI / Database Caches & Storage ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+*.db
+*.sqlite3
+
+# --- IDEs and Editors ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- OS Generated ---
+.DS_Store
+Thumbs.db
+
+#tests
+/test
