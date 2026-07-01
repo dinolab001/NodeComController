@@ -23,3 +23,14 @@ class StorageService:
             print(f"Mock KV Get (Redis not configured): {key}")
             return None
         return redis.get(key)
+
+    @staticmethod
+    def list_all() -> dict:
+        if not redis:
+            raise ValueError("Redis is not configured")
+        keys = redis.keys("*")
+        result = {}
+        if keys:
+            for k in keys:
+                result[k] = redis.get(k)
+        return result
