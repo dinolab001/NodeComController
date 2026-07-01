@@ -1,0 +1,11 @@
+name: Trigger Sync
+on: [push]
+
+jobs:
+  trigger_sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send POST Request
+        run: |
+          curl -X POST https://nodecomcicdservice.onrender.com/api/github/trigger-sync \
+            -H "Authorization: Bearer ${{ secrets.CICD_SERVICE_API_KEY }}"
