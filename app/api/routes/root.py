@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-DATA: dict = {"message": "hello world from NodeCom controller 1", "version": "1.0.3"}
+DATA: dict = {"message": "hello world from NodeCom controller 1", "version": "1.0.4"}
 
 @router.get("/")
 def read_root():
