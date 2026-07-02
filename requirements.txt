@@ -4,3 +4,5 @@ discord-webhook==1.4.1
 httpx
 pydantic-settings
 upstash-redis
+psycopg2-binary
+sqlmodel
